@@ -199,6 +199,9 @@ class _SignupState extends State<Signup> {
                   ),
                 ),
                 style: TextStyle(color: Colors.black),
+                onChanged: (value) {
+                  _password = value; // Update _password on every change
+                },
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a password';
@@ -319,7 +322,7 @@ class _SignupState extends State<Signup> {
               ],
             ),
             SizedBox(
-              height: 240,
+              height: 100,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
