@@ -1,3 +1,4 @@
+import 'package:empowerall/onboarding/ob1.dart';
 import 'package:empowerall/signin/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -173,8 +174,10 @@ class _SignupState extends State<Signup> {
                 TextButton(
                   onPressed: () {
                     if (_formkey.currentState!.validate()) {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) =>));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Onboarding()));
                     } else {}
                   },
                   style: ButtonStyle(
