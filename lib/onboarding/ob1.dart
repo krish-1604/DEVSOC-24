@@ -1,3 +1,4 @@
+import 'package:empowerall/home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -116,10 +117,10 @@ class _OnboardingState extends State<Onboarding> {
                   TextButton(
                     onPressed: () {
                       if (_currentPage == headings.length - 1) {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => Signup()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Home()),
+                        );
                       } else {
                         _pageController.nextPage(
                           duration: Duration(milliseconds: 300),
