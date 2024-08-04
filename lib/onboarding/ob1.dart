@@ -1,6 +1,7 @@
 import 'package:empowerall/home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class _OnboardingState extends State<Onboarding> {
   ];
 
   List<String> files = ["assets/ob1.png", "assets/ob2.png", "assets/ob3.png"];
-
+  
   @override
   void dispose() {
     _pageController.dispose();
@@ -41,8 +42,8 @@ class _OnboardingState extends State<Onboarding> {
         child: Column(
           children: [
             SizedBox(
-              width: 400 * fem,
-              height: 170 * fem,
+              width: 400,
+              height: 170,
             ),
             Center(
               child: SizedBox(
@@ -74,7 +75,7 @@ class _OnboardingState extends State<Onboarding> {
             SizedBox(height: 5),
             Container(
               padding:
-                  EdgeInsets.fromLTRB(40 * fem, 10 * fem, 40 * fem, 40 * fem),
+                  EdgeInsets.fromLTRB(40, 10 , 40 * fem, 40 * fem),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
